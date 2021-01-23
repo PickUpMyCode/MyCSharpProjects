@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0A17E307-1D83-4C12-944C-AB8BBC19731D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Florzinha</RootNamespace>
+    <AssemblyName>Florzinha</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>.\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Funcionario.cs" />
+    <Compile Include="MysqlDatabase.cs" />
+    <Compile Include="MysqlDataRequest.cs" />
+    <Compile Include="Produto.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TelaAlterar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaAlterar.Designer.cs">
+      <DependentUpon>TelaAlterar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaCadastro.Designer.cs">
+      <DependentUpon>TelaCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaConsultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaConsultar.Designer.cs">
+      <DependentUpon>TelaConsultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaDeletar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaDeletar.Designer.cs">
+      <DependentUpon>TelaDeletar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaInicial.Designer.cs">
+      <DependentUpon>TelaInicial.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TelaAlterar.resx">
+      <DependentUpon>TelaAlterar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaCadastro.resx">
+      <DependentUpon>TelaCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaConsultar.resx">
+      <DependentUpon>TelaConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaDeletar.resx">
+      <DependentUpon>TelaDeletar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaInicial.resx">
+      <DependentUpon>TelaInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="kisspng-chocolate-chip-cookie-graphic-design-biscuits-logo-cookies-logo-5add63db349f46.4368318115244584592156.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="kisspng-chocolate-chip-cookie-graphic-design-biscuits-logo-cookies-logo-5add63db349f46.4368318115244584592156.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="índice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="backforund.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
