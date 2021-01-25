@@ -1,0 +1,6 @@
+﻿- Depois de aplicar, mesmo que nao tenha carregado a imagem, prosseguir;
+- Colocar pontuação maxima ate 10;
+- Colocar os pontos como cm de pika;
+- fazer um menu principal onde tera os creditos e as configurações iniciais;
+- n permitir acessar a consfigurações uma vez q o jogo foi iniciado;
+- colocar um tutoria.
